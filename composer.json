@@ -4,7 +4,6 @@
   "name": "neosrulez/cloudtranslation",
   "require": {
     "neos/neos": "*",
-    "neos/fusion-form": "^1.0",
     "google/cloud-translate": "^1.7.2"
   },
   "autoload": {
