@@ -1,0 +1,16 @@
+prototype(NeosRulez.CloudTranslation:Component.TextTranslatable) < prototype(Neos.Neos:ContentComponent) {
+    translatedText = NeosRulez.CloudTranslation:Class.Translate {
+        content = ${node.properties.text}
+        targetLanguage = ${node.properties.targetLanguage}
+        @if.condition = ${node.properties.translate}
+    }
+    isInBackend = ${site.context.inBackend}
+    translate = ${node.properties.translate}
+    targetLanguage = ${node.properties.targetLanguage}
+    renderer = afx`
+        <NeosRulez.CloudTranslation:Component.AbstractContent>
+            <span @if.render={props.isInBackend} class="d-block" ><small @if.render={props.translate && props.targetLanguage ? true : false} class="text-muted" >Auto-Translate to "{props.targetLanguage}":</small> <Neos.Neos:Editable property="text" block={false} /></span>
+            {props.translate && !props.isInBackend ? props.translatedText : false}
+        </NeosRulez.CloudTranslation:Component.AbstractContent>
+    `
+}

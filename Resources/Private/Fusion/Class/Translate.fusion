@@ -1,0 +1,4 @@
+prototype(NeosRulez.CloudTranslation:Class.Translate) {
+    @class = 'NeosRulez\\CloudTranslation\\Fusion\\TranslateFusion'
+    content = false
+}

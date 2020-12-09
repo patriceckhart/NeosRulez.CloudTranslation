@@ -1,0 +1,10 @@
+prototype(Neos.NodeTypes:Text) {
+    translatedText = NeosRulez.CloudTranslation:Class.Translate {
+        content = ${node.properties.text}
+        targetLanguage = ${node.properties.targetLanguage}
+        @if.condition = ${node.properties.translate}
+    }
+    isInBackend = ${site.context.inBackend}
+
+    text = ${this.isInBackend ? node.properties.text : this.translatedText ? this.translatedText : node.properties.text}
+}

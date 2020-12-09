@@ -1,0 +1,8 @@
+'NeosRulez.CloudTranslation:Component.TextTranslatable':
+  superTypes:
+    'Neos.NodeTypes:Text': true
+    'NeosRulez.CloudTranslation:Mixin.Language': true
+  ui:
+    label: 'Text (translateable)'
+    icon: fas fa-language
+    position: 210

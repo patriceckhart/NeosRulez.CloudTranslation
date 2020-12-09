@@ -1,0 +1,20 @@
+{
+  "description": "A Neos CMS plugin which translates text from nodetypes with the Google Translate Api.",
+  "type": "neos-package",
+  "name": "neosrulez/cloudtranslation",
+  "require": {
+    "neos/neos": "*",
+    "neos/fusion-form": "^1.0",
+    "google/cloud-translate": "^1.7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "NeosRulez\\CloudTranslation\\": "Classes/"
+    }
+  },
+  "extra": {
+    "neos": {
+      "package-key": "NeosRulez.CloudTranslation"
+    }
+  }
+}

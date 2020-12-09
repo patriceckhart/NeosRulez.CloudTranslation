@@ -1,0 +1,28 @@
+'NeosRulez.CloudTranslation:Mixin.Language':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        neosrulez_cloudtranslate_group:
+          label: 'Cloud Translate'
+          icon: fas fa-language
+  properties:
+    translate:
+      type: boolean
+      ui:
+        label: 'Translate text'
+        inspector:
+          group: neosrulez_cloudtranslate_group
+          position: 'before targetLanguage'
+    targetLanguage:
+      defaultValue: ''
+      type: string
+      ui:
+        label: 'Target Language'
+        inspector:
+          hidden: 'ClientEval:node.properties.translate ? false : true'
+          group: neosrulez_cloudtranslate_group
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            dataSourceIdentifier: neosrulez-cloudtranslate-languages
