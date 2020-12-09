@@ -11,6 +11,7 @@
       type: boolean
       ui:
         label: 'Translate text'
+        reloadIfChanged: true
         inspector:
           group: neosrulez_cloudtranslate_group
           position: 'before targetLanguage'
@@ -19,6 +20,7 @@
       type: string
       ui:
         label: 'Target Language'
+        reloadIfChanged: true
         inspector:
           hidden: 'ClientEval:node.properties.translate ? false : true'
           group: neosrulez_cloudtranslate_group

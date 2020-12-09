@@ -5,7 +5,8 @@ Neos:
         NeosRulez.CloudTranslation: true
 NeosRulez:
   CloudTranslation:
-    apiKey: 'XyzaSyURHKEpqk8X3zG-xSFh9-0ffKvEEVMyh5t'
-    format: 'html'
-    model: 'base'
-    allowableTags: 'p,em,i,strong,ul,ol,li,br,h1,h2,h3,h4,h5,h6'
+    CloudTranslationApi:
+      apiKey: 'XyzaSyURHKEpqk8X3zG-xSFh9-0ffKvEEVMyh5t'
+      format: 'html'
+      model: 'base'
+      allowableTags: 'p,em,i,strong,ul,ol,li,br,h1,h2,h3,h4,h5,h6'

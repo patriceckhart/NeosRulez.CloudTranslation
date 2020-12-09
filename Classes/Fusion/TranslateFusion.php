@@ -31,9 +31,9 @@ class TranslateFusion extends AbstractFusionObject {
             $translate = new TranslateClient();
             $result = $translate->translate($content, [
                 'target' => $targetLanguage,
-                'key' => $this->settings['apiKey'],
-                'model' => $this->settings['model'],
-                'format' => $this->settings['format'],
+                'key' => $this->settings['CloudTranslationApi']['apiKey'],
+                'model' => $this->settings['CloudTranslationApi']['model'],
+                'format' => $this->settings['CloudTranslationApi']['format'],
             ]);
             $response = str_replace('& nbsp;', '', str_replace('nbsp &;', '', $result['text']));
         }

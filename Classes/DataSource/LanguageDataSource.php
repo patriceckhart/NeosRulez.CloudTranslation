@@ -41,17 +41,24 @@ class LanguageDataSource extends AbstractDataSource {
      */
     public function getData(NodeInterface $node = null, array $arguments = array()) {
         $options = [];
+        $result = [
+            'label' => 'api key required',
+            'value' => 'foo'
+        ];
         $translate = new TranslateClient();
         $languages = $translate->localizedLanguages([
-            'key' => $this->settings['apiKey'],
+            'key' => $this->settings['CloudTranslationApi']['apiKey'],
         ]);
-        foreach ($languages as $language) {
-            $options[] = [
-                'label' => $language['name'],
-                'value' => $language['code']
-            ];
+        if($languages) {
+            foreach ($languages as $language) {
+                $options[] = [
+                    'label' => $language['name'],
+                    'value' => $language['code']
+                ];
+            }
+            $result = $options;
         }
-        return $options;
+        return $result;
     }
 
 }
