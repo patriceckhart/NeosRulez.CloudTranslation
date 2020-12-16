@@ -3,7 +3,8 @@ namespace NeosRulez\CloudTranslation\Fusion;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
-use Google\Cloud\Translate\TranslateClient;
+
+use Google\Cloud\Translate\V2\TranslateClient;
 
 class TranslateFusion extends AbstractFusionObject {
 

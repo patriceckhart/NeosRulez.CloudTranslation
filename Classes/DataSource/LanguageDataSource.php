@@ -8,15 +8,10 @@ use Neos\Neos\Service\DataSource\AbstractDataSource;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\Eel\FlowQuery\FlowQuery;
 use Neos\Eel\FlowQuery\Operations;
-use Google\Cloud\Translate\TranslateClient;
+
+use Google\Cloud\Translate\V2\TranslateClient;
 
 class LanguageDataSource extends AbstractDataSource {
-
-    /**
-     * @Flow\Inject
-     * @var \Neos\ContentRepository\Domain\Service\ContextFactoryInterface
-     */
-    protected $contextFactory;
 
     /**
      * @var array
