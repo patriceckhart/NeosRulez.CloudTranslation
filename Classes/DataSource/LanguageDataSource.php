@@ -8,8 +8,7 @@ use Neos\Neos\Service\DataSource\AbstractDataSource;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\Eel\FlowQuery\FlowQuery;
 use Neos\Eel\FlowQuery\Operations;
-
-use Google\Cloud\Translate\V2\TranslateClient;
+use Google\Cloud\Translate\TranslateClient;
 
 class LanguageDataSource extends AbstractDataSource {
 
